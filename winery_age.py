@@ -1,9 +1,9 @@
 import datetime
 
 def get_winery_age():
-	now = int(datetime.datetime.now().year)
-	winery_found_year = 1919
-	winery_age = now - winery_found_year
+	now_year = int(datetime.datetime.now().year)
+	winery_foundation_year = 1919
+	winery_age = now_year - winery_found_year
 	return winery_age
 	
 if __name__ == '__main__':
