@@ -1,11 +1,6 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-import datetime
-
-now = datetime.datetime.now().year
-
-winery_found_year = 1920
-winery_age = now - winery_found_year
+from winery_age import get_winery_age
 
 
 with open("action.txt", "r", encoding='utf-8-sig') as rose_file:
@@ -29,7 +24,7 @@ env = Environment(
 template = env.get_template('template.html')
 
 rendered_page = template.render(
-    winery_age=winery_age, production=production)
+    winery_age=get_winery_age(), production=production)
 
 with open('index.html', 'w', encoding="utf8") as file:
     file.write(rendered_page)
