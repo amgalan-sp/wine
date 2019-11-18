@@ -23,4 +23,4 @@ def get_parsed_page():
     return
 
 if __name__ == '__main__':
-	get_parsed_page()
+    get_parsed_page()
