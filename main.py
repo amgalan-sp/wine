@@ -13,7 +13,7 @@ def get_parsed_page():
     template = env.get_template('template.html')
 
     rendered_page = template.render(
-        winery_age=get_winery_age(), production=get_production('action.txt'))
+        winery_age=get_winery_age(), production=get_production('assortment.txt'))
 
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)
