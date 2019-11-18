@@ -14,4 +14,4 @@ def get_production(filename):
 
 
 if __name__ == '__main__':
-	print(get_production('action.txt'))
+	print(get_production('assortment.txt'))
