@@ -4,7 +4,7 @@ from winery_age import get_winery_age
 from format_list import get_production
 
 
-def get_parsed_page():
+def main():
     env = Environment(
         loader=FileSystemLoader('.'),
         autoescape=select_autoescape(['html', 'xml'])
@@ -23,4 +23,4 @@ def get_parsed_page():
     return
 
 if __name__ == '__main__':
-    get_parsed_page()
+    main()
