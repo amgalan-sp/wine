@@ -1,7 +1,5 @@
-def get_products(filename):
-    with open(filename, "r", encoding='utf-8-sig') as rose_file:
-        rose_list = rose_file.read()
-    eng_list = rose_list.replace('Название: ', 'title:').replace('Сорт: ', 'sort:').replace('Цена: ', 'price:')
+def get_products(some_list):
+    eng_list = some_list.replace('Название: ', 'title:').replace('Сорт: ', 'sort:').replace('Цена: ', 'price:')
     list_by_branch = eng_list.replace('Картинка: ', 'image:').replace('Выгодное предложение' , 'action:True').split('#')
     list_by_branch.remove('')
     products = {}
