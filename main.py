@@ -13,7 +13,7 @@ def main():
     template = env.get_template('template.html')
 
     rendered_page = template.render(
-        winery_age=get_winery_age(), production=get_products(get_read_file('assortment.txt')))
+        winery_age=get_winery_age(), products=get_products(get_read_file('assortment.txt')))
 
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)

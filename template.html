@@ -111,11 +111,11 @@
           </div>
         </div>
         <div class="row">
-          {% for branch in production %}        
+          {% for branch in products %}
             <div class="col-12 section-title text-center mb-5">
               <h2 class="d-block">{{branch}}</h2>
             </div>
-            {% for product in production[branch] %}
+            {% for product in products[branch] %}
               <div class="col-lg-4 mb-5 col-md-6">
                 <div class="wine_v_1 text-center pb-4 pt-5">
                   <img src="{{product.image}}" alt="Image" class="img-fluid">
